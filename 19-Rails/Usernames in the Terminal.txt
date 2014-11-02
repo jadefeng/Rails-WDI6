@@ -1,0 +1,10 @@
+# Playing around with usernames and user_authenticate passwords :) Keeping them logged in!
+
+user_name = "jade"
+User.select(:name) -> select from users
+user_name = "john" <- one of the names from User
+user = User.where(:name => user_name)
+user.where(:name => user_name).first
+user_pass = 'chicken'
+user_authenticate 'football' => false
+user_authenticate 'chicken' => true

@@ -1,0 +1,11 @@
+<h1>This is the page about the <%= @artist.name.upcase  %></h1>
+<%= image_tag(@artist.image, :class => 'thumbnail') %> 
+
+<%= link_to 'Delete', @artist, :method => :delete, :data => { :confirm => "Are you sure?" } %>  <!-- artist_path(@artist.id) -->
+
+<%= link_to 'Edit', edit_artist_path(@artist)  %>
+
+<h3>Works</h3>
+<% @artist.works.each do |work| %>
+	<%= link_to work.title, work  %>
+<% end %>

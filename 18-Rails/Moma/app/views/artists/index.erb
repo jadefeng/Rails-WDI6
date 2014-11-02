@@ -1,0 +1,12 @@
+<% @artists.each do |artist|  %>
+	<ul>
+		<li> <%= image_tag(artist.image, :class => 'thumbnail')  %></li>
+		<li>Name: <%= link_to(artist.name, artist_path(artist)) %> </li> 
+			<!-- Can also do: # link_to(artist.name, artist) -->
+		<li>Nationality: <%= artist.nationality %> </li>
+		<li>Period: <%= artist.period %> </li>
+		<li>DOB: <%= artist.dob.strftime('%A %B %d %Y') if artist.dob %> </li>
+
+	</ul>
+
+<% end %>

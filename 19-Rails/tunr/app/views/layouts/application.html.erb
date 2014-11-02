@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tunr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav>
+	<div class="container">
+	<ul>
+		<li><%= link_to('Home', root_path)  %></li>
+		<% if @current_user %>
+			<li><%= "Hello #{@current_user.name}" %></li>  <!-- Nav includes a welcome sign if you are logged in as a user -->
+			<li><%= link_to('Sign out', login_path, :method => :delete, :data => {:confirm => "Are you sure?"})  %></li>
+		<% else %>
+			<li><%= link_to('Sign Up', new_user_path) if !@current_user %></li>
+			<li><%= link_to('Login', login_path) if !@current_user %></li>
+		<% end %>
+	</ul>
+
+	</div>
+</nav>
+
+
+<div class="container">
+	<%= yield %>
+</div>
+
+</body>
+</html>

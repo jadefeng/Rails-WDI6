@@ -1,0 +1,18 @@
+<% if @price && @price > 0 %> 	<!-- Returns a stock and its price if the stock exists. -->
+<div>
+	<h3> 
+		Information current as of <%= @date %> on <span><%= @year %></span> for <span><%= @name %></span>
+	</h3>
+	<h3>
+		The last trading price of the stock <%= params[:stock_symbol.upcase] %> was <span>$<%= @price %> </span></h3>
+	<h3> 
+		The volume was <%= @volume %>, with the range for the day at $<%= @rangeLOW %> - $<%= @rangeHIGH %>
+	</h3>
+</div>
+<% end %>
+
+<% if @price == 0 %>  	<!-- Returns this if the stock does not exist. -->
+	<h3>
+		The stock <%= params[:stock_symbol].upcase %> does not exist. 
+	<h3>
+<% end %>

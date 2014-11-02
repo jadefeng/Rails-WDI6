@@ -1,0 +1,47 @@
+html {
+	font-family: Arial;
+}
+
+body {
+	margin: 0;
+}
+.container {
+	max-width: 960px;
+	margin: auto;
+}
+img.thumbnail {
+	width:30em;
+	height: auto;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+nav h1 {
+	color:white ;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+}
+
+ul {
+	list-style: none;
+}
+nav li{
+display: inline;
+}
+
+label {
+	min-width: 100px;
+	display: inline-block;
+}
+
+nav {
+	background-color: teal;
+	padding: 1em;
+
+}

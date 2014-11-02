@@ -1,0 +1,6 @@
+<h1>This is a page about <%= @work.title %></h1>
+<%= image_tag(@work.image, :class => 'thumbnail') %>  
+<h3>Artist: <%= link_to @work.artist.name, @work.artist if @work.artist %></h3>
+
+<%= link_to 'Delete', @work, :method => :delete, :data => {:confirm => "Are you sure?"}  %>
+<%= link_to 'Edit', edit_work_path(@work) %>

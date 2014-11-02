@@ -1,0 +1,11 @@
+<h1>The planet we are looking at right now ... </h1>
+<h2> <%= @planet.name %> </h2>
+<%= image_tag @planet.image %>
+
+<h3> Is a planet with <%= pluralize(@planet.moons, "moon") %> </h3>
+<h3> It has an orbit with <%= number_to_human(@planet.orbit) %> days.</h3>
+<h3> It has a mass of <%= number_to_human(@planet.mass) %> kgs and a diameter of <%= number_to_human(@planet.diameter) %> km. </h3>
+
+<!-- # Delete the planet! -->
+<%= button_to('Delete planet', planet_delete_path(@planet.id)) %>
+<%= link_to('Edit planet', planet_edit_path(@planet.id))  %>

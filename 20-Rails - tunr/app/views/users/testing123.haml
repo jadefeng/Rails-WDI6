@@ -1,0 +1,23 @@
+%section
+	%h2#someid Hello world!
+
+	%h3.someclass 
+		= Song.count
+		songs in the database
+
+	%label 
+		HOW MANY HIGHPANTS
+	%input#balloons.funpark{:name => "highpants", :autofocus => true}
+
+.hello
+	%h3#someid This already knows that it is a DIV! How smart!
+
+%div.hello
+	%h3.someclass Better to actually mention it's a DIV though. Otherwise it gets confusing to read
+
+	%ul
+	- Song.all.each do |song|
+		%li.song_title= song.name
+
+
+

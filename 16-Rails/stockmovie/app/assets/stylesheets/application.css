@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+body {
+ 	background-image: url('http://www.non-solo-arte.com/images/cat-desktop-background-grey.jpg');
+ 	background-size: cover; 
+ 	color: white;
+ 	font-family: 'Montserrat', sans-serif;
+ }
+
+.home_icon {
+	width: 250px;
+	height: 300px;
+	display: inline-table;
+}
+
+.home_icon img {
+	width: 95%;
+	height: auto;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    font-size: 1.5em;
+}
+
+
+a, a:visited {
+	color: #1A77DB;
+}
+
+a:hover {
+	color: #d8d21a;
+}
+
+footer {
+	margin-top: 100px;
+	position: relative;
+   bottom:0;
+
+}
+
+span {
+	color: #d8d21a;
+}
